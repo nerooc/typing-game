@@ -1,4 +1,9 @@
-# TypingGame
+# Typing Game
+
+### Tutorial project from Stephen Grider's course on udemy.
+### https://www.udemy.com/course/the-modern-angular-bootcamp/
+
+<br/>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
 
