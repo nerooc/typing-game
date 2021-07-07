@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-
+import { lorem } from "faker";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
 export class AppComponent {
   title = "typing-game";
 
-  exampleString = "Lorem ipsum dolor sit amet";
+  exampleString = lorem.sentence();
   inputString = "";
   isWon = false;
 
@@ -19,5 +19,13 @@ export class AppComponent {
   onInput(value) {
     this.updateInputString(value);
     this.isWon = this.inputString === this.exampleString;
+  }
+
+  compare(randomLetter: string, enteredLetter: string) {
+    if (!enteredLetter) {
+      return "pending";
+    }
+
+    return randomLetter === enteredLetter ? "correct" : "incorrect";
   }
 }
